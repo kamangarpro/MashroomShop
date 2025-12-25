@@ -16,6 +16,7 @@
     --accent: #06b6d4;
     --accent-pink: #ec4899;
     --accent-yellow: #fbbf24;
+    --accent-water: #00d4ff;
 
     /* 🎭 Glass Effects */
     --glass: rgba(20, 25, 45, 0.7);
@@ -815,6 +816,86 @@ img {
     border: 2px dashed var(--glass-border);
 }
 
+/* ═══════════════════════════════════════════════════════════
+   🌊 VERGA CONCEPT SECTION
+   ═══════════════════════════════════════════════════════════ */
+.verga-concept-section {
+    padding: 120px 0;
+    background: linear-gradient(180deg, var(--bg-dark) 0%, #0c1220 100%);
+}
+
+.concept-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.concept-content .badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid var(--accent-water);
+    color: var(--accent-water);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.concept-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+.meaning-text {
+    font-size: 1.25rem;
+    color: var(--text-bright);
+    line-height: 2;
+    margin-bottom: 24px;
+}
+
+.highlight-text {
+    color: var(--accent-water);
+    font-weight: 800;
+}
+
+.concept-features {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.c-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg-card);
+    padding: 12px 20px;
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+}
+
+.c-feature i {
+    color: var(--accent-water);
+    font-size: 1.2rem;
+}
+
+@media (max-width: 900px) {
+    .concept-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .concept-features {
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
 /* Experts */
 .experts-grid {
     display: grid;
@@ -1147,7 +1228,9 @@ img {
         gap: 20px;
         text-align: center;
     }
-}/* ═══════════════════════════════════════════════════════════
+}
+
+/* ═══════════════════════════════════════════════════════════
    💬 TESTIMONIALS SECTION
    ═══════════════════════════════════════════════════════════ */
 
@@ -1471,6 +1554,7 @@ img {
         padding: 0 20px 20px;
     }
 }
+
 /* ═══════════════════════════════════════════════════════════
    💬 TESTIMONIALS SECTION
    ═══════════════════════════════════════════════════════════ */
