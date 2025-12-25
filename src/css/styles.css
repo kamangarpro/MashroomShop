@@ -1,51 +1,59 @@
 /* ═══════════════════════════════════════════════════════════
-   🎨 PREMIUM DARK GLASSMORPHISM THEME - ULTIMATE EDITION
+   🎵 APPLE MUSIC INSPIRED PREMIUM THEME - VERGA EDITION
    ═══════════════════════════════════════════════════════════ */
 
 :root {
-    /* 🌈 Premium Color Palette */
-    --bg-dark: #0a0e1a;
-    --bg-darker: #050810;
-    --bg-card: rgba(20, 25, 45, 0.6);
-    --bg-card-hover: rgba(30, 35, 60, 0.8);
+    /* 🌈 Apple Music Color Palette */
+    --bg-dark: #000000;
+    --bg-darker: #0a0a0a;
+    --bg-card: rgba(28, 28, 30, 0.72);
+    --bg-card-hover: rgba(44, 44, 46, 0.85);
+    --bg-elevated: rgba(58, 58, 60, 0.6);
 
-    /* 💎 Neon Gradients */
+    /* 💎 Vibrant Accent Colors */
     --primary: #00ff88;
-    --primary-dark: #00cc6a;
-    --secondary: #a855f7;
-    --accent: #06b6d4;
-    --accent-pink: #ec4899;
-    --accent-yellow: #fbbf24;
+    --primary-soft: rgba(0, 255, 136, 0.15);
+    --secondary: #bf5af2;
+    --accent: #00d4ff;
+    --accent-pink: #ff2d55;
+    --accent-orange: #ff9500;
     --accent-water: #00d4ff;
 
-    /* 🎭 Glass Effects */
-    --glass: rgba(20, 25, 45, 0.7);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --glass-light: rgba(255, 255, 255, 0.05);
+    /* 🎭 Enhanced Glass Effects */
+    --glass: rgba(28, 28, 30, 0.72);
+    --glass-strong: rgba(28, 28, 30, 0.88);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-light: rgba(255, 255, 255, 0.08);
+    --glass-separator: rgba(255, 255, 255, 0.06);
 
     /* 📝 Typography */
-    --text-main: #e2e8f0;
+    --text-main: #f5f5f7;
     --text-bright: #ffffff;
-    --text-muted: #94a3b8;
-    --text-dim: #64748b;
+    --text-muted: #a1a1a6;
+    --text-dim: #636366;
 
-    /* ✨ Gradients */
+    /* ✨ Premium Gradients */
     --gradient-primary: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
-    --gradient-secondary: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
-    --gradient-hero: linear-gradient(135deg, #0a0e1a 0%, #1a1f3a 50%, #0f1729 100%);
-    --gradient-card: linear-gradient(145deg, rgba(20, 25, 45, 0.6), rgba(30, 35, 60, 0.4));
-    --gradient-neon: linear-gradient(90deg, #00ff88, #00d4ff, #a855f7, #ec4899);
+    --gradient-secondary: linear-gradient(135deg, #bf5af2 0%, #ff2d55 100%);
+    --gradient-hero: linear-gradient(180deg, #000000 0%, #1a1a1a 100%);
+    --gradient-card: linear-gradient(145deg, rgba(28, 28, 30, 0.72), rgba(44, 44, 46, 0.5));
+    --gradient-mesh: radial-gradient(circle at 20% 50%, rgba(0, 255, 136, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 212, 255, 0.08) 0%, transparent 50%);
 
-    /* 🌟 Shadows & Glows */
-    --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.6);
-    --shadow-xl: 0 30px 80px rgba(0, 0, 0, 0.7);
-    --glow-primary: 0 0 20px rgba(0, 255, 136, 0.4);
-    --glow-secondary: 0 0 20px rgba(168, 85, 247, 0.4);
+    /* 🌟 Apple-style Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.12);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.16);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.24);
+    --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.32);
+    --glow-primary: 0 0 32px rgba(0, 255, 136, 0.3);
+    --glow-secondary: 0 0 32px rgba(191, 90, 242, 0.3);
 
-    /* 🔤 Fonts */
-    --font-main: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    /* 🔤 SF Pro Display Font Stack */
+    --font-main: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+
+    /* 🎬 Smooth Transitions */
+    --transition-smooth: cubic-bezier(0.4, 0.0, 0.2, 1);
+    --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 /* ═══════════════════════════════════════════════════════════
@@ -64,13 +72,15 @@ body {
     font-family: var(--font-main);
     background: var(--bg-dark);
     color: var(--text-main);
-    line-height: 1.7;
+    line-height: 1.6;
     overflow-x: hidden;
     position: relative;
-    letter-spacing: 0.2px;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* 🌌 Animated Background Mesh */
+/* 🌌 Apple Music Style Mesh Background */
 body::before {
     content: '';
     position: fixed;
@@ -78,13 +88,10 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background:
-        radial-gradient(circle at 15% 50%, rgba(168, 85, 247, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 50% 80%, rgba(0, 255, 136, 0.05) 0%, transparent 50%);
+    background: var(--gradient-mesh);
     pointer-events: none;
     z-index: -1;
-    animation: meshMove 20s ease-in-out infinite alternate;
+    opacity: 0.6;
 }
 
 @keyframes meshMove {
@@ -208,12 +215,17 @@ img {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(10, 14, 26, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--glass-border);
-    padding: 16px 0;
-    transition: all 0.3s ease;
+    background: var(--glass-strong);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 0.5px solid var(--glass-separator);
+    padding: 12px 0;
+    transition: all 0.3s var(--transition-smooth);
+}
+
+.navbar.scrolled {
+    background: var(--glass-strong);
+    box-shadow: 0 1px 0 0 var(--glass-separator), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
@@ -385,40 +397,43 @@ img {
 .btn-primary {
     background: var(--gradient-primary);
     color: var(--bg-dark);
-    padding: 14px 36px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 1.1rem;
+    padding: 14px 32px;
+    border-radius: 980px;
+    font-weight: 600;
+    font-size: 1.05rem;
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    box-shadow: 0 4px 20px rgba(0, 255, 136, 0.4);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 255, 136, 0.25);
+    transition: all 0.3s var(--transition-smooth);
     border: none;
     cursor: pointer;
+    letter-spacing: -0.01em;
 }
 
 .btn-primary:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(0, 255, 136, 0.5);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 255, 136, 0.35);
 }
 
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
     color: var(--text-bright);
-    padding: 14px 36px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 1.1rem;
+    padding: 14px 32px;
+    border-radius: 980px;
+    font-weight: 600;
+    font-size: 1.05rem;
     cursor: pointer;
+    transition: all 0.3s var(--transition-smooth);
 }
 
 .btn-secondary:hover {
     border-color: var(--primary);
-    background: rgba(0, 255, 136, 0.05);
-    transform: translateY(-4px);
+    background: var(--primary-soft);
+    transform: translateY(-2px) scale(1.05);
 }
 
 .hero-stats {
@@ -510,21 +525,23 @@ img {
 }
 
 .brand-card {
-    background: var(--bg-card);
+    background: var(--glass);
     border: 1px solid var(--glass-border);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-radius: 24px;
     padding: 40px 30px;
     text-align: center;
-    transition: all 0.4s ease;
+    transition: all 0.4s var(--transition-smooth);
     position: relative;
     overflow: hidden;
 }
 
 .brand-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transform: translateY(-8px) scale(1.02);
+    border-color: var(--glass-border);
+    background: var(--bg-card-hover);
+    box-shadow: var(--shadow-lg);
 }
 
 .brand-card::before {
@@ -584,20 +601,23 @@ img {
 }
 
 .product-card {
-    background: linear-gradient(145deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.8));
+    background: var(--glass);
     border: 1px solid var(--glass-border);
-    border-radius: 24px;
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-radius: 28px;
     padding: 40px;
     width: 100%;
     max-width: 440px;
     position: relative;
-    transition: all 0.4s ease;
+    transition: all 0.4s var(--transition-smooth);
 }
 
 .product-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--secondary);
-    box-shadow: 0 15px 50px rgba(168, 85, 247, 0.15);
+    transform: translateY(-8px) scale(1.02);
+    border-color: var(--glass-border);
+    background: var(--bg-card-hover);
+    box-shadow: var(--shadow-xl);
 }
 
 .product-badge {
